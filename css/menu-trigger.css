@@ -1,0 +1,37 @@
+
+.menu-trigger {
+    z-index: 199;
+    display: none;
+    position: absolute;
+    right: 24px;
+}
+
+.barTop, .barMiddle, .barBottom {
+    width: 24px;
+    height: 2px;
+    background-color: var(--primary-text-color);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.change .barTop {
+    transform: translate(0, 6px) rotate(-45deg);
+}
+  
+.change .barMiddle {
+    opacity: 0;
+}
+  
+.change .barBottom {
+    transform: translate(0, -6px) rotate(45deg);
+}
+
+.prevent-scroll {
+    position: fixed;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+

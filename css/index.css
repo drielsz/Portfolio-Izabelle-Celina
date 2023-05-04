@@ -1,0 +1,235 @@
+:root {
+  --background-color: #F0EFED;
+  --primary-text-color: #242331;
+  --background-color-button: #242331;
+  --paragraph-text-color: #373F51;
+  --debug-all-outline: 0px solid red;
+  --primary-padding: 16px;
+  --padding-bottom-sections: 60px;
+  --padding-top-sections: 60px;
+  --world-line-height: 1.3em
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: var(--debug-all-outline);
+}
+
+html {
+  min-height: 100%;
+  background: var(--background-color) fixed;
+  color: var(--primary-text-color);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: var(--world-line-height);
+}
+
+header, main, footer {
+  margin: 0 auto;
+  padding: var(--primary-padding);
+  outline: var(--debug-all-outline);
+  width: 100%;
+  padding-bottom: 0;
+}
+
+header {
+  z-index: 299;
+  display: inline-block;
+  padding-bottom: var(--padding-bottom-sections);
+}
+
+p {
+  font-size: calc(16px + (8/1200) * 25 * 1vw);
+  color: var(--paragraph-text-color);
+}
+
+#blur-overlay {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background: rgba(0,0,0, 0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.wrapper {
+  font: 16px/1.4 sans-serif;  
+  max-width: 1200px;  
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.paddingSection {
+  padding-bottom: var(--padding-bottom-sections);
+}
+
+.branding {
+  font-weight: normal;
+  color: var(--primary-text-color);
+  z-index: 199;
+  display: inline-block;
+  letter-spacing: -1px;
+}
+
+.branding a, .branding:active, .branding:hover, .branding:visited {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+.branding img {
+  height: 60px;
+}
+
+ul {
+  list-style: disc;
+}
+
+
+.navbar {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  min-height: 60px;
+  align-items: center;
+  overflow: hidden;
+  max-width: 1200px;
+}
+
+.navbar li a {
+  color: var(--primary-text-color);
+  display: flex;
+  text-decoration: none;
+  padding: 5px 50px 5px 50px;
+  font-family: var(--primary-font-family);
+  text-transform: capitalize;
+  font-weight: 200;
+}
+
+.navbar li a:last-child {
+  padding-right: 0;
+}
+
+.navbar li a:hover {
+  color: var(--primary-text-color);
+  background: none;
+}
+
+.navbar ul li {
+  font-weight: bold;
+  list-style-type: none;
+}
+
+.navbar .nav-links ul {
+  display: flex;
+}
+
+.header {
+  font-size: 16px;
+}
+
+main {
+  position: relative;
+  max-width: 1200px;
+}
+
+main .container-box {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 30px;
+  grid-auto-rows: auto;
+  align-items: center;
+}
+
+/* Text */
+.box-l {
+  grid-column: 1/3;
+  grid-row: 1/4;
+  padding-bottom: var(--padding-bottom-sections);
+}
+
+.box-l h1,p {
+  padding-bottom: 20px;
+}
+
+.box-l .contact {
+  border: none;
+  background-color: var(--background-color-button);
+  color: var(--background-color);
+  padding: 10px;
+  width: 200px;
+  height: 45px;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+/* Image */
+.box-r {
+  display: flex;
+  grid-column: 3/4;
+  min-width: 297px;
+  grid-row: 1/4;
+  justify-content: center;
+}
+
+.box-r .primary-image {
+  width: 70%;
+  height: 70%;
+}
+
+.divulgBoxContainer {
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 30px;
+  flex-wrap: wrap;
+}
+
+.box-div {
+  width: 300px;
+  height: 300px;
+  display: flex;
+}
+
+.box-div .divulg-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  min-width: 200px;
+  transition: .5 ease;
+}
+
+.box-div:hover .overlay {
+  opacity: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  background-color: #008CBA;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
