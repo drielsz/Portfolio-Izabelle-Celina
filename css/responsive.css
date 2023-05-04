@@ -9,6 +9,14 @@
         grid-column: 1/4;
         grid-row: 4/4;
     }
+    .box-r svg {
+        position: absolute;
+        z-index: -1;
+        top: 400px;
+        left: -100px;
+        width: calc(400px + (16/1200) * 25 * 1vw);
+        height: calc(125px + (16/1200) * 25 * 1vw);
+      }
     .menu-trigger {
         z-index: 999;
         display: block;
@@ -68,6 +76,38 @@
 }
 
 @media screen and (max-width: 696px) {
+    .left.first-child {
+        grid-column: 1/2;
+        grid-row: 1/4
+      }
+    .right.first-child {
+        grid-column: 1/4;
+        grid-row: 4/4
+    }
+
+    .left.second-child {
+        grid-column: 1/4;
+        grid-row: 4/4;
+    }
+
+    .right.second-child {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+
+    .left.third-child {
+        grid-column: 1/2;
+        grid-row: 1/4
+      }
+    .right.third-child {
+        grid-column: 1/4;
+        grid-row: 4/4
+    }
+
+      .box-image {
+        width: 100%;
+
+      }
     .divulgBoxContainer {
         justify-content: center;
     }

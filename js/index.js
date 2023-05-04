@@ -9,13 +9,9 @@ const branding = document.querySelector(".branding")
 const navLinks = document.querySelector(".nav-links")
 
 const divulgImg = document.querySelector(".divulg-img")
-const overlayImg = document.querySelector(".overlay")
 
+const overlayImg = document.querySelectorAll("div.overlay")
 
-window.addEventListener("load", (event) => {
-    overlayImg.style.height = `${divulgImg.clientHeight}px`
-    overlayImg.style.width = `${divulgImg.clientWidth}px`
-})
 
 menuButton.addEventListener('click', () => {
     navLinks.classList.toggle('mobile-menu')
@@ -27,17 +23,19 @@ menuButton.addEventListener('click', () => {
 
 
 window.addEventListener("resize", function () {
-    console.log(`Height: ${divulgImg.clientHeight}`)
-    console.log(`Width: ${divulgImg.clientWidth}`)
+
     if(window.innerWidth < 696) {
-        overlayImg.style.height = `${divulgImg.clientHeight}px`
-        overlayImg.style.width = `${divulgImg.clientWidth}px`
+        Array.from(overlayImg).forEach((item) => {
+            item.style.height = `${divulgImg.clientHeight}px`
+            item.style.width = `${divulgImg.clientWidth}px`
+        })
     }
     else {
-        overlayImg.style.height = `${divulgImg.clientHeight}px`
-        overlayImg.style.width = `${divulgImg.clientWidth}px`
+        Array.from(overlayImg).forEach((item) => {
+            item.style.height = `${divulgImg.clientHeight}px`
+            item.style.width = `${divulgImg.clientWidth}px`
+        })
     }
-    console.log(overlayImg.clientHeight)
 })
 
 window.addEventListener("resize", function( ) {
