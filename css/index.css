@@ -18,6 +18,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   outline: var(--debug-all-outline);
+  scroll-behavior: smooth;
 }
 
 html {
@@ -104,6 +105,21 @@ ul {
   align-items: center;
   overflow: hidden;
   max-width: 1200px;
+  transition: .5 ease-in-out;
+}
+
+.position-fixed {
+  position: fixed;
+  top: 0;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 84%;
+  z-index: 999;
+  transition: .5 ease-in-out;
+  overflow-x: hidden;
+  padding: 20px 20px 20px 20px;
 }
 
 .navbar li a {
@@ -325,4 +341,30 @@ div.right.box-info.third-child.t-svg svg {
   left: 65vw;
   width: 400px;
   height: 400px;
+}
+
+.scroll-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #242321;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: .1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s linear;
+  opacity: 0;
+}
+
+.scroll-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.scroll-button svg {
+  width: 40px;
+  height: 40px;
 }

@@ -2,8 +2,6 @@ let path = document.querySelectorAll('path')
 
 Array.from(path).forEach((items) => {
     let pathLength = items.getTotalLength()
-    console.log(pathLength)
-    
     items.style.strokeDasharray = pathLength + ' ' + pathLength
 
     items.style.strokeDashoffset = pathLength
