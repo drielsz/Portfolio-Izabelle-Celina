@@ -1,0 +1,16 @@
+@import url('https://fonts.cdnfonts.com/css/oxygen');
+@import url('https://fonts.cdnfonts.com/css/lato');
+
+h1, h4 {
+    font-family:lato;
+    font-style:normal;
+    font-weight:bold;
+    src:local('Lato'),url(https://fonts.cdnfonts.com/s/14882/Lato-Regular.woff) format('woff')
+}
+
+p {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Oxygen'), url('https://fonts.cdnfonts.com/s/15692/Oxygen-Light.woff') format('woff');
+}

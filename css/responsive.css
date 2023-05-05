@@ -18,6 +18,9 @@
 }
 
 @media screen and (max-width: 920px) {
+    div.right.box-info.third-child.t-svg svg {
+        display: none;
+      }
     .box-r {
         grid-column: 1/4;
         grid-row: 4/4;
@@ -89,6 +92,9 @@
 }
 
 @media screen and (max-width: 696px) {
+    .second-child svg { 
+        display: none;
+    }
     .left.first-child {
         grid-column: 1/2;
         grid-row: 1/4
@@ -140,7 +146,15 @@
         grid-column: 1/4;
         grid-row: 4/4;
     }
-    
+
+    .dif-section svg {
+        position: absolute;
+        left: -49px;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+        height: 300px;
+    }   
 }
 
 @media screen and (max-width: 620px) {

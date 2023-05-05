@@ -1,0 +1,46 @@
+/* Line stroke animation */
+.hover-stroke-animation {
+    display: inline-block;
+    position: relative;
+    color: red;
+}
+
+.hover-stroke-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(36, 35, 49));
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out
+}
+
+.hover-stroke-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Navbar */
+.nav-links ul li a:hover {
+    color: #373F51;
+    padding: 0;
+}
+
+/* 373F51 + 242331 */
+
+
+/* first button */
+
+@keyframes slidebg {
+    to {
+        background-position: 10vw;
+    }
+}
+.contact:hover {
+    background-image: linear-gradient(to top, #242331, #D3D4D924);
+    animation:slidebg 5s linear infinite;
+    cursor: pointer;
+}

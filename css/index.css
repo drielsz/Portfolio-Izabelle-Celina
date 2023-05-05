@@ -63,7 +63,7 @@ p {
 }
 
 .wrapper {
-  font: 16px/1.4 sans-serif;  
+  font: 16px/1.4;  
   max-width: 1200px;  
   margin: 0 auto;
   padding: 20px;
@@ -110,14 +110,15 @@ ul {
   color: var(--primary-text-color);
   display: flex;
   text-decoration: none;
-  padding: 5px 50px 5px 50px;
+  margin: 5px 50px 5px 50px;
   font-family: var(--primary-font-family);
   text-transform: capitalize;
   font-weight: 200;
 }
 
+
 .navbar li a:last-child {
-  padding-right: 0;
+  margin-right: 0;
 }
 
 .navbar li a:hover {
@@ -204,6 +205,16 @@ main .container-box {
   height: calc(20 + (8/1200) * 25 * 1vw);
 }
 
+.container-svg {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background: pink;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+
 h4.paddingSection {
   text-align: center;
   letter-spacing: 3px;
@@ -284,4 +295,34 @@ section.dif-section h4{
   min-width: 100%;
   height: auto;
   background: #D9D9D9;
+}
+
+
+.second-child svg {
+  position: absolute;
+  right: 0px;
+  width: 400px;
+  height: 400px;
+}
+
+.dif-section svg {
+  position: absolute;
+  left: -95px;
+  z-index: -1;
+  width: 400px;
+  height: 400px;
+  bottom: -113px;
+}
+
+.second-child svg {
+  position: absolute;
+  z-index: -1;
+  top: 90vw;
+}
+
+div.right.box-info.third-child.t-svg svg {
+  position: absolute;
+  left: 65vw;
+  width: 400px;
+  height: 400px;
 }
