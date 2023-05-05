@@ -17,7 +17,7 @@
       }
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 919px) {
     div.right.box-info.third-child.t-svg svg {
         display: none;
       }
