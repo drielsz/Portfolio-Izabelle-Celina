@@ -10,7 +10,6 @@ window.addEventListener('scroll', (event) => {
     if (scrollPercentage < disappearMoment) {
         scrollButton.style.opacity = 0;
     }
-    console.log(scrollPercentage)
 }) 
 
 scrollButton.addEventListener('click', (event) => {
