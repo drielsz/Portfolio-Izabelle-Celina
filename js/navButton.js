@@ -1,15 +1,16 @@
 const scrollButton = document.querySelector('.scroll-button')
 
-console.log(scrollButton)
+const disappearMoment = 0.04180
 
 window.addEventListener('scroll', (event) => {
     let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight)
-    if (scrollPercentage > 0.041807432432432436) {
-       scrollButton.style.opacity = 100
+    if (scrollPercentage > disappearMoment) {
+       scrollButton.style.opacity = 100;
     }
-    else {
-        scrollButton.style.display = 0
+    if (scrollPercentage < disappearMoment) {
+        scrollButton.style.opacity = 0;
     }
+    console.log(scrollPercentage)
 }) 
 
 scrollButton.addEventListener('click', (event) => {
