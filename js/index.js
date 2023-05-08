@@ -18,7 +18,6 @@ menuButton.addEventListener('click', () => {
     menuIcon.classList.toggle('change')
     mainElement.classList.toggle('prevent-scroll')
     blurElement.classList.toggle('hidden')
-    console.log("ok")
 })
 
 
