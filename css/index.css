@@ -276,7 +276,7 @@ section.dif-section p{
   text-align: end;
 }
 
-section.dif-section button{
+section.dif-section input.contact-dif{
   border: none;
   background-color: transparent;
   border: 1px solid var(--background-color-button);
@@ -286,6 +286,7 @@ section.dif-section button{
   height: 45px;
   text-transform: uppercase;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 section.dif-section h4{
@@ -362,6 +363,17 @@ div.right.box-info.third-child.t-svg svg {
   transition: transform .4s cubic-bezier(0.36, 0, 0.66, 0);
   opacity: 0;
   scale: 0;
+  cursor: pointer;
+}
+
+.scroll-button div {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -370,7 +382,7 @@ div.right.box-info.third-child.t-svg svg {
   width: 35px;
   height: 35px;
   fill: white;
-  
+  border-radius: 50%;
   transition: transform .4s cubic-bezier(0.36, 0, 0.66, 0);
   transform: translateY(0%) scale(0) rotate(0.001deg);
 }
@@ -392,4 +404,24 @@ div.right.box-info.third-child.t-svg svg {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+}
+
+
+#loading {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:100%;
+  overflow-y: hidden;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background-color: var(--background-color);
+  z-index: 200;
+}
+
+#loading h1 {
+  text-align: center;
 }

@@ -12,7 +12,6 @@ const divulgImg = document.querySelector(".divulg-img")
 
 const overlayImg = document.querySelectorAll("div.overlay")
 
-
 menuButton.addEventListener('click', () => {
     navLinks.classList.toggle('mobile-menu')
     menuIcon.classList.toggle('change')
